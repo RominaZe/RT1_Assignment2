@@ -44,6 +44,11 @@ The third node is a service node that subscribes to the robot's position and vel
 
 Furthermore, a launch file has been crafted to orchestrate the entire simulation. Notably, a parameter has been incorporated in the launch file, offering flexibility to adjust the size of the averaging window specifically for the functionalities of node (c). This parameter serves as a valuable tuning mechanism to optimize the behavior of the system.
 
+For launching this files use 
+```bash
+roslaunch assignment_2_2023 assignment1.launch
+```
+
 In summary, the developed package and its constituent nodes seamlessly integrate into a cohesive simulation environment, offering a robust set of capabilities for target manipulation, information retrieval, and real-time metric computation.
 
 # Node Explanation
