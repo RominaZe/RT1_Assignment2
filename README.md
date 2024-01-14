@@ -176,5 +176,17 @@ The primary goal of `node_c` is to implement a service that provides valuable me
 rosservice call /distance_averageVelocity
 ```
 
+## Possible improvements to consider:
+--------
+1. **Increase Robot Speed:**
+   - Elevate the robot's speed for efficient target attainment by refining velocity parameters or implementing a dynamic control mechanism. Consider integrating a service that, upon activation, sends a command to `cmd_vel` to seamlessly adjust the robot's velocity, allowing for both incremental increases and decreases as needed. 
+
+2. **Add Range Check for Target Selection:**
+   - Implement a check to ensure that the selected target is within the reachable range of the robot. This prevents selecting targets that are beyond the robot's capabilities.
+
+3. **Improve User Interaction:**
+   - Modify the node to present an interface to the user immediately, eliminating the need to manually call the node for goal setting. This improvement enhances user experience and simplifies goal-setting procedures.
+
+Incorporating these enhancements into your node would result in a more efficient and user-friendly navigation system for the robot.
 
 
