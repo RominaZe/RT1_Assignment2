@@ -77,8 +77,60 @@ The primary goal of `node_a` is to manage communication and navigation within th
 #### Service Call Example
 For optimal usage, it is recommended to restart the node to access the interface and set new goals.
 ```bash
-rosrun <your-package-name> node_a
+rosrun assignment_2_2023 node_a
 ```
+### Pseudo-code of node A
+```bash
+Initialize ROS node "node_a"
+
+Create ROS publisher "pub" for custom message type assignment_2_2023/RobotPV
+Create ROS subscriber "sub" for topic "/odom" with CallbackPositionVelocity as callback function
+
+Define CallbackPositionVelocity(message):
+    Extract position and velocity information from the received odometry message
+    Create a custom message assignment_2_2023/RobotPV with the extracted data
+    Publish the custom message to topic "/position_velocity"
+
+Define ClientGoal():
+    Create an action client for PlanningAction with server "/reaching_goal"
+    Wait for the action server to start
+
+    Loop:
+        Get the current goal coordinates from parameters "/des_pos_x" and "/des_pos_y"
+        Create a PlanningGoal with the current goal coordinates
+        Send the goal to the action server
+
+        Print the current goal coordinates
+        Prompt the user for new goal coordinates (input_x, input_y)
+
+        Set new goal coordinates in parameters "/des_pos_x" and "/des_pos_y"
+        Update the PlanningGoal with the new coordinates
+        Resend the updated goal to the action server
+
+        While the goal is pending:
+            Prompt the user to cancel the goal (y/n)
+            If user chooses to cancel:
+                Cancel the goal and print a warning
+                Break out of the loop
+            If user chooses not to cancel:
+                Wait for the result with a timeout of 120 seconds
+                If the goal is finished:
+                    Print a success message
+                Else:
+                    Print a warning about not reaching the goal within 120 seconds
+                    Break out of the loop
+
+        Allow ROS to process any pending callbacks
+
+Create a thread for ClientGoal
+
+Start the ROS event loop (ros::spin())
+
+Wait for the ClientGoal thread to finish
+
+Exit
+```
+
 
 ### `Node B` - Goal Reporting Node
 
