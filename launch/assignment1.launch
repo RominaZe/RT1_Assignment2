@@ -4,7 +4,7 @@
     <param name="des_pos_x" value= "0.0" />
     <param name="des_pos_y" value= "1.0" />
 
-    <node pkg="assignment_2_2023" type="node_a" name="node_a" />    
+    <node pkg="assignment_2_2023" type="node_a" name="node_a" launch-prefix="xterm -e" />    
     <node pkg="assignment_2_2023" type="node_b" name="node_b" /> 
     <node pkg="assignment_2_2023" type="node_c" name="node_c" /> 
     
