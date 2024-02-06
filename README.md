@@ -184,9 +184,6 @@ rosservice call /distance_averageVelocity
 2. **Add Range Check for Target Selection:**
    - Implement a check to ensure that the selected target is within the reachable range of the robot. This prevents selecting targets that are beyond the robot's capabilities.
 
-3. **Improve User Interaction:**
-   - Modify the node to present an interface to the user immediately, eliminating the need to manually call the node for goal setting. This improvement enhances user experience and simplifies goal-setting procedures.
-
 Incorporating these enhancements into your node would result in a more efficient and user-friendly navigation system for the robot.
 
 
