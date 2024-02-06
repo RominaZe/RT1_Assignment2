@@ -75,9 +75,9 @@ The primary goal of `node_a` is to manage communication and navigation within th
    - In case of encountering obstacles, the robot continues its movement until finding a free space, then resumes progress toward the original goal.
 
 #### Service Call Example
-For optimal usage, it is recommended to restart the node to access the interface and set new goals.
+For optimal usage, it is recommended to install xterm to access the interface and set new goals.
 ```bash
-rosrun assignment_2_2023 node_a
+sudo pip install xterm
 ```
 ### Pseudo-code of node A
 ```bash
