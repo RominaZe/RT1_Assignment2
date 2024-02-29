@@ -50,7 +50,7 @@ bool DistSpeedCallback(assignment_2_2023::Average::Request& req,
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "node_c_part2");
+    ros::init(argc, argv, "node_c");
     ros::NodeHandle nh;
     
     ros::ServiceServer service = nh.advertiseService("/distance_averageVelocity", DistSpeedCallback);
