@@ -2,6 +2,10 @@ RT1 Asignment 2
 ==================
 For the assigned task, we were presented with a specialized environment that necessitated the implementation of diverse nodes, drawing upon the knowledge and skills cultivated throughout the Research Track course. This task involved the creation and integration of distinct nodes, each tailored to fulfill specific functionalities within the given environment. The challenge called for a synthesis of theoretical insights and practical expertise gained during the course, fostering a comprehensive application of research-oriented concepts. The implementation process served as a dynamic platform for the application of theoretical principles to real-world scenarios, showcasing a synthesis of academic understanding and hands-on problem-solving capabilities
 
+## Documentation :  
+https://rominaze.github.io/Research_Track/
+
+
 # ROS Simulation Environment
 
 ## Overview
